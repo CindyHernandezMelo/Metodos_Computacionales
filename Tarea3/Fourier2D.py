@@ -4,6 +4,8 @@ from matplotlib.colors import LogNorm
 from scipy import fftpack
 from scipy.fftpack import fft, fftfreq
 
+# con ayuda de https://www.scipy-lectures.org/intro/scipy/auto_examples/solutions/plot_fft_image_denoise.html 
+
 arbol = plt.imread('Arboles.png')
 arbol_fft = fftpack.fft2(arbol)
 plt.figure()
@@ -12,8 +14,10 @@ plt.colorbar()
 plt.savefig('HernandezCindy_FT2D.pdf')
 
 r, c = arbol_fft.shape
-a_filter = 23
+a_filter = 20
 arbol_fft[:,a_filter:r-a_filter] = 0
+arbol_fft[a_filter:r-a_filter,:] = 0
+
 arbol_fft[:,a_filter:r-a_filter] = 0
 plt.figure()
 plt.imshow(np.abs(arbol_fft), norm=LogNorm(vmin=1))

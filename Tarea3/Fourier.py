@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pylab as plt
-import scipy.io as sio
 from scipy.fftpack import fft, fftfreq
 from scipy import interpolate
 
