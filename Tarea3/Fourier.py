@@ -48,7 +48,7 @@ plt.savefig('HernandezCindy_filtrada.pdf')
 # Incompletos.dat
 print('')
 print('No se puede realizar la transformada de Fourier con la interpolacion')
-print('porque no todos los datos estan tomados con el mismo dt')
+print('porque no todos los datos estan tomados con la misma frecuencia')
 
 f_cuadra =  interpolate.interp1d(incompletos[:,0], incompletos[:,-1], kind =  'quadratic')
 f_cubica =  interpolate.interp1d(incompletos[:,0], incompletos[:,-1], kind = 'cubic')
