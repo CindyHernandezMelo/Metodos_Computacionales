@@ -30,7 +30,7 @@ plt.xlabel('Frecuencia (Hz)')
 plt.ylabel('Amplitud')
 plt.title('Transformada de Fourier de Signal.dat')
 plt.savefig('HernandezCindy_TF.pdf')
-
+print('Los componentes principales de la senal se encuentras en las frecuencias: 109Hz, 209Hz y 385Hz ')
 #Diseno del Filtro
 signal_idxpasabajas1000 = np.ones(signal_n) 
 signal_idxpasabajas1000 = np.where(abs(signal_fr)<1000, signal_idxpasabajas1000, 0)
