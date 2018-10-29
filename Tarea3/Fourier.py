@@ -74,7 +74,7 @@ plt.plot(signal_fr, abs(incompletos_cubica_fft), label = 'Interpolacion Cubica')
 plt.legend()
 print('')
 print('Los componentes que no se encuentran en las frecuencias principales')
-print('aumentan su magnitud')
+print('aumentan su magnitud. Es decir que aumenta el ruido')
 plt.savefig('HernandezCindy_TF_interpola.pdf')
 
 signal_idxpasabajas500 = np.ones(signal_n) 
