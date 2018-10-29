@@ -24,7 +24,9 @@ covarianza_calculada = np.zeros([data.shape[1],data.shape[1]])
 for i in range(np.shape(covarianza_calculada)[0]):
     for j in range(np.shape(covarianza_calculada)[1]):
         covarianza_calculada[i,j] = np.sum(data2[:,i]*data2[:,j])/(data.shape[0]-1)
-        
+
+print(covarianza_calculada)
+
 valores_propios ,vectores_propios = LA.eigh(covarianza_calculada)
 
 for i in range(len(valores_propios)):
