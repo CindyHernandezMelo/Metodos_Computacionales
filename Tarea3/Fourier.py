@@ -75,6 +75,7 @@ plt.legend()
 print('')
 print('Los componentes que no se encuentran en las frecuencias principales')
 print('aumentan su magnitud')
+plt.savefig('HernandezCindy_TF_interpola.pdf')
 
 signal_idxpasabajas500 = np.ones(signal_n) 
 signal_idxpasabajas500 = np.where(abs(signal_fr)<500, signal_idxpasabajas500, 0)
