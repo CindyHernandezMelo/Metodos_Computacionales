@@ -38,7 +38,7 @@ nuevos_vectores = np.dot(data2,vectores_propios[:,-2:])
     
 plt.figure()
 plt.scatter(nuevos_vectores[:,0][np.where(data_text == 'B')], nuevos_vectores[:,1][np.where(data_text == 'B')], label = 'Benigno', alpha=0.4, c='g')
-plt.scatter(nuevos_vectores[:,0][np.where(data_text == 'M')], nuevos_vectores[:,1][np.where(data_text == 'M')], label = 'Maligno', alpha=0.2, c='r')
+plt.scatter(nuevos_vectores[:,0][np.where(data_text == 'M')], nuevos_vectores[:,1][np.where(data_text == 'M')], label = 'Maligno', alpha=0.5, c='r')
 plt.legend()
 plt.savefig('HernandezCindy_PCA.pdf')
 
